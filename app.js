@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var smtpemailRouter = require('./routes/smtpemail'); // ✅ Import the email route
+var resetPasswordEmail = require('./routes/sendPasswordChangeNotification'); // ✅ Import the reset email route
 
 var app = express();
 
@@ -23,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/send', smtpemailRouter); // ✅ Use the email route
-
+app.use('/send-password-change-notification', resetPasswordEmail); // ✅ Use the reset email route
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
