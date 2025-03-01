@@ -24,7 +24,7 @@ const sendPasswordChangeNotification = async (email, userName , message) => {
     const mailOptions = {
         from: "sukumarm9339@gmail.com",
         to: email, // Send to email if provided
-        subject: "Password Change Notification " + message,
+        subject: message,
         html: `
             <!DOCTYPE html>
             <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
