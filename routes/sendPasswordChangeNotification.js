@@ -14,15 +14,15 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: "sukumarm9339@gmail.com", // Your Gmail ID
-        pass: "aqdzamketnrkccef", // App Password
+        user: "tnpscstudyplanner@gmail.com", // Your Gmail ID
+        pass: "kwyyoyoifbnkqyru", // App Password
     },
 });
 
 // Function to send password change notification
 const sendPasswordChangeNotification = async (email, userName , message) => {
     const mailOptions = {
-        from: "sukumarm9339@gmail.com",
+        from: "tnpscstudyplanner@gmail.com",
         to: email, // Send to email if provided
         subject: message,
         html: `

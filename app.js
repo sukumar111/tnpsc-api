@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var smtpemailRouter = require('./routes/smtpemail'); // ✅ Import the email route
 var resetPasswordEmail = require('./routes/sendPasswordChangeNotification'); // ✅ Import the reset email route
 var signupEmail = require('./routes/sendWelcomeEmail'); // ✅ Import the Signup email route
+var scheduleEmail = require('./routes/scheduleEmail'); // ✅ Import the Schedule email route
 
 var app = express();
 
@@ -27,6 +28,8 @@ app.use('/users', usersRouter);
 app.use('/send', smtpemailRouter); // ✅ Use the email route
 app.use('/send-password-change-notification', resetPasswordEmail); // ✅ Use the reset email route
 app.use('/send-welcome-email', signupEmail); // ✅ Use the Signup email route
+app.use('/schedule-email', scheduleEmail); // ✅ Use the Schedule email route
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

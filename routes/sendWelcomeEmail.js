@@ -14,15 +14,15 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: "sukumarm9339@gmail.com", // Your Gmail ID
-        pass: "aqdzamketnrkccef", // App Password
+        user: "tnpscstudyplanner@gmail.com", // Your Gmail ID
+        pass: "kwyyoyoifbnkqyru", // App Password
     },
 });
 
 // Function to send welcome email
 const sendWelcomeEmail = async (email, userName) => {
     const mailOptions = {
-        from: "sukumarm9339@gmail.com", // Your email
+        from: "tnpscstudyplanner@gmail.com", // Your email
         to: email, // User's email
         subject: "Welcome to TNPSC Study Planner",
         html: `
